@@ -12,7 +12,16 @@ class EventsScreen extends StatelessWidget {
         title: Text('Events in $location'),
       ),
       body: Center(
-        child: Text('List of events for $location'),
+        child: Column(
+          children: <Widget>[
+            SizedBox(
+              width: 300,
+              height: 300,
+              child: Image.asset('assets/$location.png'),
+            ),
+            Text('List of events for $location'),
+          ], 
+        ),
       ),
     );
   }
