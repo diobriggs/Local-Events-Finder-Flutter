@@ -20,4 +20,154 @@ flutter:
   assets:
     - assets/Atlanta, GA.png
     - assets/New York, NY.png
+    - assets/Los Angeles, CA.png
+    - assets/Chicago, IL.png
+    - assets/Houston, TX.png
+    - assets/Phoenix, AZ.png
+    - assets/Philadelphia, PA.png
+    - assets/San Antonio, TX.png
+    - assets/San Diego, CA.png
+    - assets/Dallas, TX.png
+    - assets/Austin, TX.png
+    - assets/Jacksonville, FL.png
+    - assets/Columbus, OH.png
+    - assets/Indianapolis, IN.png
+    - assets/Fort Worth, TX.png
+    - assets/Charlotte, NC.png
     - assets/San Francisco, CA.png
+    - assets/Seattle, WA.png
+    - assets/Denver, CO.png
+    - assets/Boston, MA.png
+    - assets/Nashville, TN.png
+    - assets/Detroit, MI.png
+    - assets/Oklahoma City, OK.png
+    - assets/Portland, OR.png
+    - assets/Las Vegas, NV.png
+    - assets/Baltimore, MD.png
+    - assets/Milwaukee, WI.png
+    - assets/Albuquerque, NM.png
+    - assets/Tucson, AZ.png
+    - assets/Fresno, CA.png
+    - assets/Sacramento, CA.png
+    - assets/Kansas City, MO.png
+    - assets/Mesa, AZ.png
+    - assets/Omaha, NE.png
+    - assets/Miami, FL.png
+    - assets/Long Beach, CA.png
+    - assets/Virginia Beach, VA.png
+    - assets/Oakland, CA.png
+    - assets/Minneapolis, MN.png
+    - assets/Tulsa, OK.png
+    - assets/Birmingham, AL.png
+    - assets/Montgomery, AL.png
+    - assets/Mobile, AL.png
+    - assets/Huntsville, AL.png
+    - assets/Tuscaloosa, AL.png
+    - assets/Anchorage, AK.png
+    - assets/Fairbanks, AK.png
+    - assets/Juneau, AK.png
+    - assets/Sitka, AK.png
+    - assets/Ketchikan, AK.png
+    - assets/Chandler, AZ.png
+    - assets/Glendale, AZ.png
+    - assets/Scottsdale, AZ.png
+    - assets/Gilbert, AZ.png
+    - assets/Little Rock, AR.png
+    - assets/Fort Smith, AR.png
+    - assets/Fayetteville, AR.png
+    - assets/Springdale, AR.png
+    - assets/Jonesboro, AR.png
+    - assets/San Jose, CA.png
+    - assets/Bakersfield, CA.png
+    - assets/Anaheim, CA.png
+    - assets/Santa Ana, CA.png
+    - assets/Aurora, CO.png
+    - assets/Colorado Springs, CO.png
+    - assets/Fort Collins, CO.png
+    - assets/Lakewood, CO.png
+    - assets/Bridgeport, CT.png
+    - assets/New Haven, CT.png
+    - assets/Stamford, CT.png
+    - assets/Hartford, CT.png
+    - assets/Waterbury, CT.png
+    - assets/Wilmington, DE.png
+    - assets/Dover, DE.png
+    - assets/Newark, DE.png
+    - assets/Middletown, DE.png
+    - assets/Smyrna, DE.png
+    - assets/Tampa, FL.png
+    - assets/Orlando, FL.png
+    - assets/St. Petersburg, FL.png
+    - assets/Hialeah, FL.png
+    - assets/Tallahassee, FL.png
+    - assets/Fort Lauderdale, FL.png
+    - assets/Port St. Lucie, FL.png
+    - assets/Augusta, GA.png
+    - assets/Columbus, GA.png
+    - assets/Macon, GA.png
+    - assets/Savannah, GA.png
+    - assets/Honolulu, HI.png
+    - assets/Hilo, HI.png
+    - assets/Kailua, HI.png
+    - assets/Kaneohe, HI.png
+    - assets/Waipahu, HI.png
+    - assets/Boise, ID.png
+    - assets/Meridian, ID.png
+    - assets/Nampa, ID.png
+    - assets/Idaho Falls, ID.png
+    - assets/Pocatello, ID.png
+    - assets/Aurora, IL.png
+    - assets/Naperville, IL.png
+    - assets/Joliet, IL.png
+    - assets/Rockford, IL.png
+    - assets/Springfield, IL.png
+    - assets/Fort Wayne, IN.png
+    - assets/Evansville, IN.png
+    - assets/South Bend, IN.png
+    - assets/Carmel, IN.png
+    - assets/Des Moines, IA.png
+    - assets/Cedar Rapids, IA.png
+    - assets/Davenport, IA.png
+    - assets/Sioux City, IA.png
+    - assets/Waterloo, IA.png
+    - assets/Wichita, KS.png
+    - assets/Overland Park, KS.png
+    - assets/Olathe, KS.png
+    - assets/Topeka, KS.png
+    - assets/Louisville, KY.png
+    - assets/Lexington, KY.png
+    - assets/Bowling Green, KY.png
+    - assets/Owensboro, KY.png
+    - assets/Covington, KY.png
+    - assets/New Orleans, LA.png
+    - assets/Baton Rouge, LA.png
+    - assets/Shreveport, LA.png
+    - assets/Lafayette, LA.png
+    - assets/Lake Charles, LA.png
+    - assets/Portland, ME.png
+    - assets/Lewiston, ME.png
+    - assets/Bangor, ME.png
+    - assets/South Portland, ME.png
+    - assets/Auburn, ME.png
+    - assets/Frederick, MD.png
+    - assets/Rockville, MD.png
+    - assets/Gaithersburg, MD.png
+    - assets/Bowie, MD.png
+    - assets/Worcester, MA.png
+    - assets/Springfield, MA.png
+    - assets/Lowell, MA.png
+    - assets/Cambridge, MA.png
+    - assets/Grand Rapids, MI.png
+    - assets/Warren, MI.png
+    - assets/Sterling Heights, MI.png
+    - assets/Lansing, MI.png
+    - assets/Ann Arbor, MI.png
+    - assets/Saint Paul, MN.png
+    - assets/Rochester, MN.png
+    - assets/Duluth, MN.png
+    - assets/Bloomington, MN.png
+    - assets/Jackson, MS.png
+    - assets/Gulfport, MS.png
+    - assets/Southaven, MS.png
+    - assets/Biloxi, MS.png
+    - assets/Hattiesburg, MS.png
