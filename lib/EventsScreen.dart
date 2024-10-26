@@ -12,12 +12,7 @@ class EventsScreen extends StatelessWidget {
       {'name': 'Food Truck Event', 'date': '2024-11-12', 'time': '12:00 PM', 'price': 'Free'},
       {'name': 'Art Exhibit', 'date': '2024-11-15', 'time': '10:00 AM', 'price': '\$30'}
     ],
-    'New York, NY': [
-      {'name': 'Broadway Show', 'date': '2024-11-11', 'time': '8:00 PM', 'price': '\$150'},
-      {'name': 'Central Park Yoga', 'date': '2024-11-13', 'time': '9:00 AM', 'price': '\$20'},
-      {'name': 'Fashion Week', 'date': '2024-11-16', 'time': '1:00 PM', 'price': '\$100'}
-    ],
-    // Add more cities and events as needed
+    // Add more events as needed
   };
 
   @override
@@ -31,39 +26,67 @@ class EventsScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          children: <Widget>[
-            SizedBox(
-              width: 350,
-              height: 350,
-              child: Image.asset('assets/$location.png', errorBuilder: (context, error, stackTrace) {
-                return Icon(Icons.image, size: 100);
-              }),
+          children: [
+            // City image at the top
+            ClipRRect(
+              borderRadius: BorderRadius.circular(15),
+              child: Image.asset(
+                'assets/$location.png',
+                height: 200,
+                width: double.infinity,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  // Display a placeholder if the image is not found
+                  return Container(
+                    height: 200,
+                    width: double.infinity,
+                    color: Colors.grey[300],
+                    child: Center(
+                      child: Text(
+                        'Image not available',
+                        style: TextStyle(fontSize: 16, color: Colors.grey[700]),
+                      ),
+                    ),
+                  );
+                },
+              ),
             ),
-            SizedBox(height: 20),
-            Text('List of events for $location', style: TextStyle(fontSize: 20)),
-            SizedBox(height: 10),
+            SizedBox(height: 16),
             Expanded(
               child: ListView.builder(
                 itemCount: events.length,
                 itemBuilder: (context, index) {
                   final event = events[index];
-                  return ListTile(
-                    title: Text(event['name']!),
-                    subtitle: Text('${event['date']} at ${event['time']}'),
-                    trailing: Text(event['price']!),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => EventDetailsScreen(
-                            eventName: event['name']!,
-                            eventDate: event['date']!,
-                            eventTime: event['time']!,
-                            eventPrice: event['price']!,
+                  return Card(
+                    elevation: 4,
+                    margin: EdgeInsets.only(bottom: 12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: ListTile(
+                      title: Text(
+                        event['name']!,
+                        style: TextStyle(fontWeight: FontWeight.bold, color: Colors.teal[800]),
+                      ),
+                      subtitle: Text('${event['date']} at ${event['time']}'),
+                      trailing: Text(
+                        event['price']!,
+                        style: TextStyle(color: Colors.orange[700], fontWeight: FontWeight.bold),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => EventDetailsScreen(
+                              eventName: event['name']!,
+                              eventDate: event['date']!,
+                              eventTime: event['time']!,
+                              eventPrice: event['price']!,
+                            ),
                           ),
-                        ),
-                      );
-                    },
+                        );
+                      },
+                    ),
                   );
                 },
               ),

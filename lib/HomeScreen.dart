@@ -12,12 +12,11 @@ class _HomeScreenState extends State<HomeScreen> {
     'Atlanta, GA', 'New York, NY', 'Los Angeles, CA', 'Chicago, IL', 'Houston, TX',
     'Phoenix, AZ', 'Philadelphia, PA', 'San Antonio, TX', 'San Diego, CA', 'Dallas, TX',
     'Austin, TX', 'Jacksonville, FL', 'Columbus, OH', 'Indianapolis, IN', 'Fort Worth, TX',
-    'Charlotte, NC', 'San Francisco, CA', 'Seattle, WA', 'Denver, CO', 'Boston, MA',
+    'Charlotte, NC', 'San Francisco, CA', 'Seattle, WA', 'Denver, CO', 'Boston, MA', 
     'Nashville, TN', 'Detroit, MI', 'Oklahoma City, OK', 'Portland, OR', 'Las Vegas, NV',
     'Baltimore, MD', 'Milwaukee, WI', 'Albuquerque, NM', 'Tucson, AZ', 'Fresno, CA',
     'Sacramento, CA', 'Kansas City, MO', 'Mesa, AZ', 'Atlanta, GA', 'Omaha, NE', 'Miami, FL',
     'Long Beach, CA', 'Virginia Beach, VA', 'Oakland, CA', 'Minneapolis, MN', 'Tulsa, OK'
-    // Add more major cities across each state here
   ];
 
   @override
@@ -57,46 +56,57 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Local Events Finder App'),
+        title: Text('Explore Events Near You'),
         centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
-              'Enter City and State (e.g., "Atlanta, GA")',
-              style: TextStyle(fontSize: 18),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: 16.0),
-            TextField(
-              controller: _locationController,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'City, State',
-                hintText: 'Enter City, State',
+            Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
               ),
-            ),
-            SizedBox(height: 16.0),
-            DropdownButton<String>(
-              hint: Text('Select a Location'),
-              onChanged: (value) {
-                _locationController.text = value!;
-              },
-              items: _suggestedLocations.map((location) {
-                return DropdownMenuItem(
-                  value: location,
-                  child: Text(location),
-                );
-              }).toList(),
-            ),
-            SizedBox(height: 16.0),
-            ElevatedButton(
-              onPressed: () => _navigateToEventsScreen(context),
-              child: Text('Find Events'),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  children: [
+                    Text(
+                      'Enter City and State',
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                    SizedBox(height: 12),
+                    TextField(
+                      controller: _locationController,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'City, State',
+                        hintText: 'e.g., Atlanta, GA',
+                      ),
+                    ),
+                    SizedBox(height: 16),
+                    DropdownButton<String>(
+                      isExpanded: true,
+                      hint: Text('Select a Location'),
+                      onChanged: (value) {
+                        _locationController.text = value!;
+                      },
+                      items: _suggestedLocations.map((location) {
+                        return DropdownMenuItem(
+                          value: location,
+                          child: Text(location),
+                        );
+                      }).toList(),
+                    ),
+                    SizedBox(height: 16),
+                    ElevatedButton(
+                      onPressed: () => _navigateToEventsScreen(context),
+                      child: Text('Find Events'),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),

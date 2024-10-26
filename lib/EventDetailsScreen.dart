@@ -26,15 +26,16 @@ class EventDetailsScreen extends StatelessWidget {
           children: [
             Text(
               eventName,
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: Colors.teal[800]),
             ),
-            SizedBox(height: 16),
+            Divider(color: Colors.teal, thickness: 1),
+            SizedBox(height: 12),
             Text('Date: $eventDate', style: TextStyle(fontSize: 18)),
             Text('Time: $eventTime', style: TextStyle(fontSize: 18)),
-            Text('Price: $eventPrice', style: TextStyle(fontSize: 18, color: Colors.green)),
-            SizedBox(height: 20),
+            Text('Price: $eventPrice', style: TextStyle(fontSize: 18, color: Colors.orange[700])),
+            SizedBox(height: 24),
             Text(
-              'Description of the event goes here. You can provide additional details such as location, activities, or special notes for the event.',
+              'Event details and description would go here. Include any extra information about the event, location, or special instructions.',
               style: TextStyle(fontSize: 16),
             ),
           ],
