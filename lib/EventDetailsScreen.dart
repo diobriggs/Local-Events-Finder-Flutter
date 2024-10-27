@@ -5,12 +5,14 @@ class EventDetailsScreen extends StatelessWidget {
   final String eventDate;
   final String eventTime;
   final String eventPrice;
+  final String eventDescription; // New parameter for unique description
 
   EventDetailsScreen({
     required this.eventName,
     required this.eventDate,
     required this.eventTime,
     required this.eventPrice,
+    required this.eventDescription, // Include in constructor
   });
 
   @override
@@ -35,7 +37,7 @@ class EventDetailsScreen extends StatelessWidget {
             Text('Price: $eventPrice', style: TextStyle(fontSize: 18, color: Colors.orange[700])),
             SizedBox(height: 24),
             Text(
-              'Event details and description would go here. Include any extra information about the event, location, or special instructions.',
+              eventDescription, // Display the unique description
               style: TextStyle(fontSize: 16),
             ),
           ],

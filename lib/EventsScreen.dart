@@ -8,127 +8,127 @@ class EventsScreen extends StatelessWidget {
 
   final Map<String, List<Map<String, String>>> eventsData = {
     'Atlanta, GA': [
-    {'name': 'Día de los Muertos Festival', 'date': '2024-11-02', 'time': '12:00 PM', 'price': 'Free'},
-    {'name': 'Chastain Park Arts Festival', 'date': '2024-11-02 to 2024-11-03', 'time': '10:00 AM', 'price': 'Free'},
-    {'name': 'The Cher Show', 'date': '2024-11-08 to 2024-11-09', 'time': '7:30 PM', 'price': 'Varies'},
-    {'name': 'Justin Timberlake Concert', 'date': '2024-11-16', 'time': '7:30 PM', 'price': '\$90+'},
-    {'name': 'Cirque du Soleil - Twas The Night Before', 'date': '2024-11-29 to 2024-12-15', 'time': 'Varies', 'price': 'Varies'}
+    {'name': 'Día de los Muertos Festival', 'date': '2024-11-02', 'time': '12:00 PM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Chastain Park Arts Festival', 'date': '2024-11-02 to 2024-11-03', 'time': '10:00 AM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'The Cher Show', 'date': '2024-11-08 to 2024-11-09', 'time': '7:30 PM', 'price': 'Varies', 'description': "Placeholder"},
+    {'name': 'Justin Timberlake Concert', 'date': '2024-11-16', 'time': '7:30 PM', 'price': '\$90+', 'description': "Placeholder"},
+    {'name': 'Cirque du Soleil - Twas The Night Before', 'date': '2024-11-29 to 2024-12-15', 'time': 'Varies', 'price': 'Varies', 'description': "Placeholder"}
   ],
     'New York, NY': [
-    {'name': 'New York Comedy Festival', 'date': '2024-11-03 to 2024-11-10', 'time': 'Various', 'price': '\$25+'},
-    {'name': 'Radio City Christmas Spectacular', 'date': '2024-11-08 onward', 'time': 'Various', 'price': '\$65+'},
-    {'name': 'NYC Autumn Wine & Food Festival', 'date': '2024-11-18', 'time': '12:00 PM', 'price': '\$40'},
-    {'name': 'Thanksgiving Day Parade', 'date': '2024-11-28', 'time': '9:00 AM', 'price': 'Free'}
+    {'name': 'New York Comedy Festival', 'date': '2024-11-03 to 2024-11-10', 'time': 'Various', 'price': '\$25+', 'description': "Placeholder"},
+    {'name': 'Radio City Christmas Spectacular', 'date': '2024-11-08 onward', 'time': 'Various', 'price': '\$65+', 'description': "Placeholder"},
+    {'name': 'NYC Autumn Wine & Food Festival', 'date': '2024-11-18', 'time': '12:00 PM', 'price': '\$40', 'description': "Placeholder"},
+    {'name': 'Thanksgiving Day Parade', 'date': '2024-11-28', 'time': '9:00 AM', 'price': 'Free', 'description': "Placeholder"}
   ],
     'Los Angeles, CA': [
-    {'name': 'AFI Fest', 'date': '2024-11-06 to 2024-11-10', 'time': 'Various', 'price': 'Free'},
-    {'name': 'Los Angeles Auto Show', 'date': '2024-11-17 to 2024-11-26', 'time': '10:00 AM', 'price': '\$20+'},
-    {'name': 'Thanksgiving Turkey Trot', 'date': '2024-11-28', 'time': '8:00 AM', 'price': '\$45'}
+    {'name': 'AFI Fest', 'date': '2024-11-06 to 2024-11-10', 'time': 'Various', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Los Angeles Auto Show', 'date': '2024-11-17 to 2024-11-26', 'time': '10:00 AM', 'price': '\$20+', 'description': "Placeholder"},
+    {'name': 'Thanksgiving Turkey Trot', 'date': '2024-11-28', 'time': '8:00 AM', 'price': '\$45', 'description': "Placeholder"}
   ],
     'Chicago, IL': [
-    {'name': 'Chicago Humanities Festival', 'date': '2024-11-01 to 2024-11-10', 'time': 'Various', 'price': 'Varies'},
-    {'name': 'Magnificent Mile Lights Festival', 'date': '2024-11-23', 'time': '5:30 PM', 'price': 'Free'},
-    {'name': 'Christkindlmarket', 'date': '2024-11-16 to 2024-12-24', 'time': '11:00 AM', 'price': 'Free'}
+    {'name': 'Chicago Humanities Festival', 'date': '2024-11-01 to 2024-11-10', 'time': 'Various', 'price': 'Varies', 'description': "Placeholder"},
+    {'name': 'Magnificent Mile Lights Festival', 'date': '2024-11-23', 'time': '5:30 PM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Christkindlmarket', 'date': '2024-11-16 to 2024-12-24', 'time': '11:00 AM', 'price': 'Free', 'description': "Placeholder"}
   ],
     'Houston, TX': [
-    {'name': 'Houston Cinema Arts Festival', 'date': '2024-11-07 to 2024-11-11', 'time': 'Various', 'price': 'Varies'},
-    {'name': 'Nutcracker Market', 'date': '2024-11-09 to 2024-11-12', 'time': '10:00 AM', 'price': '\$20'},
-    {'name': 'Thanksgiving Day Parade', 'date': '2024-11-28', 'time': '9:00 AM', 'price': 'Free'}
+    {'name': 'Houston Cinema Arts Festival', 'date': '2024-11-07 to 2024-11-11', 'time': 'Various', 'price': 'Varies', 'description': "Placeholder"},
+    {'name': 'Nutcracker Market', 'date': '2024-11-09 to 2024-11-12', 'time': '10:00 AM', 'price': '\$20', 'description': "Placeholder"},
+    {'name': 'Thanksgiving Day Parade', 'date': '2024-11-28', 'time': '9:00 AM', 'price': 'Free', 'description': "Placeholder"}
   ],
     'Phoenix, AZ': [
-    {'name': 'Phoenix Film Festival Fall Showcase', 'date': '2024-11-08 to 2024-11-10', 'time': 'Various', 'price': 'Varies'},
-    {'name': 'ZooLights', 'date': '2024-11-23 to 2024-12-31', 'time': '5:30 PM', 'price': '\$30'},
-    {'name': 'Phoenix Turkey Trot', 'date': '2024-11-28', 'time': '8:00 AM', 'price': '\$40'}
+    {'name': 'Phoenix Film Festival Fall Showcase', 'date': '2024-11-08 to 2024-11-10', 'time': 'Various', 'price': 'Varies', 'description': "Placeholder"},
+    {'name': 'ZooLights', 'date': '2024-11-23 to 2024-12-31', 'time': '5:30 PM', 'price': '\$30', 'description': "Placeholder"},
+    {'name': 'Phoenix Turkey Trot', 'date': '2024-11-28', 'time': '8:00 AM', 'price': '\$40', 'description': "Placeholder"}
   ],
     'Philadelphia, PA': [
-    {'name': 'Philadelphia Marathon', 'date': '2024-11-17 to 2024-11-19', 'time': '7:00 AM', 'price': 'Varies'},
-    {'name': 'Made in Philadelphia Holiday Market', 'date': '2024-11-18 to 2024-12-24', 'time': '11:00 AM', 'price': 'Free'},
-    {'name': 'Thanksgiving Day Parade', 'date': '2024-11-28', 'time': '9:00 AM', 'price': 'Free'}
+    {'name': 'Philadelphia Marathon', 'date': '2024-11-17 to 2024-11-19', 'time': '7:00 AM', 'price': 'Varies', 'description': "Placeholder"},
+    {'name': 'Made in Philadelphia Holiday Market', 'date': '2024-11-18 to 2024-12-24', 'time': '11:00 AM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Thanksgiving Day Parade', 'date': '2024-11-28', 'time': '9:00 AM', 'price': 'Free', 'description': "Placeholder"}
   ],
     'San Antonio, TX': [
-    {'name': 'Luminaria Contemporary Arts Festival', 'date': '2024-11-10', 'time': '6:00 PM', 'price': 'Free'},
-    {'name': 'Holiday River Parade', 'date': '2024-11-24', 'time': '7:00 PM', 'price': '\$25'},
-    {'name': 'Ford Holiday Boat Caroling', 'date': '2024-11-27 to 2024-12-18', 'time': '6:00 PM', 'price': 'Free'}
+    {'name': 'Luminaria Contemporary Arts Festival', 'date': '2024-11-10', 'time': '6:00 PM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Holiday River Parade', 'date': '2024-11-24', 'time': '7:00 PM', 'price': '\$25', 'description': "Placeholder"},
+    {'name': 'Ford Holiday Boat Caroling', 'date': '2024-11-27 to 2024-12-18', 'time': '6:00 PM', 'price': 'Free', 'description': "Placeholder"}
   ],
     'San Diego, CA': [
-    {'name': 'San Diego Bay Wine & Food Festival', 'date': '2024-11-13 to 2024-11-17', 'time': '12:00 PM', 'price': '\$75+'},
-    {'name': 'Surfin Santa Arrival', 'date': '2024-11-24', 'time': '1:00 PM', 'price': 'Free'},
-    {'name': 'December Nights', 'date': '2024-11-30 to 2024-12-01', 'time': '5:00 PM', 'price': 'Free'}
+    {'name': 'San Diego Bay Wine & Food Festival', 'date': '2024-11-13 to 2024-11-17', 'time': '12:00 PM', 'price': '\$75+', 'description': "Placeholder"},
+    {'name': 'Surfin Santa Arrival', 'date': '2024-11-24', 'time': '1:00 PM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'December Nights', 'date': '2024-11-30 to 2024-12-01', 'time': '5:00 PM', 'price': 'Free', 'description': "Placeholder"}
   ],
     'Dallas, TX': [
-    {'name': 'Dallas Symphony Christmas Pops', 'date': '2024-11-24 to 2024-12-10', 'time': '7:30 PM', 'price': '\$40+'},
-    {'name': 'Texas Christkindl Market', 'date': '2024-11-17 to 2024-12-23', 'time': '11:00 AM', 'price': 'Free'},
-    {'name': 'Turkey Trot', 'date': '2024-11-28', 'time': '8:00 AM', 'price': '\$30'}
+    {'name': 'Dallas Symphony Christmas Pops', 'date': '2024-11-24 to 2024-12-10', 'time': '7:30 PM', 'price': '\$40+', 'description': "Placeholder"},
+    {'name': 'Texas Christkindl Market', 'date': '2024-11-17 to 2024-12-23', 'time': '11:00 AM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Turkey Trot', 'date': '2024-11-28', 'time': '8:00 AM', 'price': '\$30', 'description': "Placeholder"}
   ],
     'Austin, TX': [
-    {'name': 'Austin Food & Wine Festival', 'date': '2024-11-04 to 2024-11-06', 'time': '11:00 AM', 'price': '\$150'},
-    {'name': 'Blue Genie Art Bazaar', 'date': '2024-11-17 to 2024-12-24', 'time': '10:00 AM', 'price': 'Free'},
-    {'name': 'Turkey Trot', 'date': '2024-11-28', 'time': '9:30 AM', 'price': '\$25'}
+    {'name': 'Austin Food & Wine Festival', 'date': '2024-11-04 to 2024-11-06', 'time': '11:00 AM', 'price': '\$150', 'description': "Placeholder"},
+    {'name': 'Blue Genie Art Bazaar', 'date': '2024-11-17 to 2024-12-24', 'time': '10:00 AM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Turkey Trot', 'date': '2024-11-28', 'time': '9:30 AM', 'price': '\$25', 'description': "Placeholder"}
   ],
     'Jacksonville, FL': [
-    {'name': 'Jacksonville Fair', 'date': '2024-11-01 to 2024-11-12', 'time': '3:00 PM', 'price': '\$10'},
-    {'name': 'Veterans Day Parade', 'date': '2024-11-11', 'time': '11:01 AM', 'price': 'Free'},
-    {'name': 'Holiday Market', 'date': '2024-11-25', 'time': '10:00 AM', 'price': 'Free'}
+    {'name': 'Jacksonville Fair', 'date': '2024-11-01 to 2024-11-12', 'time': '3:00 PM', 'price': '\$10', 'description': "Placeholder"},
+    {'name': 'Veterans Day Parade', 'date': '2024-11-11', 'time': '11:01 AM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Holiday Market', 'date': '2024-11-25', 'time': '10:00 AM', 'price': 'Free', 'description': "Placeholder"}
   ],
     'Columbus, OH': [
-    {'name': 'Ohio State vs Michigan Game', 'date': '2024-11-25', 'time': '12:00 PM', 'price': 'Varies'},
-    {'name': 'Franklin Park Holiday Festival', 'date': '2024-11-29', 'time': '5:00 PM', 'price': '\$15'},
-    {'name': 'WinterFest at Bicentennial Park', 'date': '2024-11-30', 'time': '11:00 AM', 'price': 'Free'}
+    {'name': 'Ohio State vs Michigan Game', 'date': '2024-11-25', 'time': '12:00 PM', 'price': 'Varies', 'description': "Placeholder"},
+    {'name': 'Franklin Park Holiday Festival', 'date': '2024-11-29', 'time': '5:00 PM', 'price': '\$15', 'description': "Placeholder"},
+    {'name': 'WinterFest at Bicentennial Park', 'date': '2024-11-30', 'time': '11:00 AM', 'price': 'Free', 'description': "Placeholder"}
   ],
     'Indianapolis, IN': [
-    {'name': 'Circle of Lights', 'date': '2024-11-24', 'time': '6:00 PM', 'price': 'Free'},
-    {'name': 'Christmas Gift & Hobby Show', 'date': '2024-11-09 to 2024-11-13', 'time': '10:00 AM', 'price': '\$14'},
-    {'name': 'Turkey Trot', 'date': '2024-11-28', 'time': '8:30 AM', 'price': '\$25'}
+    {'name': 'Circle of Lights', 'date': '2024-11-24', 'time': '6:00 PM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Christmas Gift & Hobby Show', 'date': '2024-11-09 to 2024-11-13', 'time': '10:00 AM', 'price': '\$14', 'description': "Placeholder"},
+    {'name': 'Turkey Trot', 'date': '2024-11-28', 'time': '8:30 AM', 'price': '\$25', 'description': "Placeholder"}
   ],
     'Fort Worth, TX': [
-    {'name': 'Fort Worth Stockyards Rodeo', 'date': '2024-11-03', 'time': '7:30 PM', 'price': '\$20+'},
-    {'name': 'Fort Worth Festival of Lights', 'date': '2024-11-23', 'time': '6:00 PM', 'price': 'Free'},
-    {'name': 'Thanksgiving Turkey Trot', 'date': '2024-11-28', 'time': '8:00 AM', 'price': '\$30'} 
+    {'name': 'Fort Worth Stockyards Rodeo', 'date': '2024-11-03', 'time': '7:30 PM', 'price': '\$20+', 'description': "Placeholder"},
+    {'name': 'Fort Worth Festival of Lights', 'date': '2024-11-23', 'time': '6:00 PM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Thanksgiving Turkey Trot', 'date': '2024-11-28', 'time': '8:00 AM', 'price': '\$30', 'description': "Placeholder"} 
   ],
     'Charlotte, NC': [
-    {'name': 'Carolina Renaissance Festival', 'date': '2024-11-04 to 2024-11-12', 'time': '10:00 AM', 'price': '\$32'},
-    {'name': 'Speedway Christmas', 'date': '2024-11-24 to 2024-12-31', 'time': '6:00 PM', 'price': '\$25'},
-    {'name': 'Thanksgiving Day Parade', 'date': '2024-11-23', 'time': '9:00 AM', 'price': 'Free'}
+    {'name': 'Carolina Renaissance Festival', 'date': '2024-11-04 to 2024-11-12', 'time': '10:00 AM', 'price': '\$32', 'description': "Placeholder"},
+    {'name': 'Speedway Christmas', 'date': '2024-11-24 to 2024-12-31', 'time': '6:00 PM', 'price': '\$25', 'description': "Placeholder"},
+    {'name': 'Thanksgiving Day Parade', 'date': '2024-11-23', 'time': '9:00 AM', 'price': 'Free', 'description': "Placeholder"}
   ],
     'San Francisco, CA': [
-    {'name': 'Illuminate SF Festival of Light', 'date': '2024-11-10 to 2024-12-31', 'time': '6:00 PM', 'price': 'Free'},
-    {'name': 'Holiday Ice Rink at Embarcadero', 'date': '2024-11-01 to 2024-01-07', 'time': '10:00 AM', 'price': '\$18'},
-    {'name': 'Thanksgiving Turkey Trot', 'date': '2024-11-23', 'time': '8:00 AM', 'price': '\$35'}
+    {'name': 'Illuminate SF Festival of Light', 'date': '2024-11-10 to 2024-12-31', 'time': '6:00 PM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Holiday Ice Rink at Embarcadero', 'date': '2024-11-01 to 2024-01-07', 'time': '10:00 AM', 'price': '\$18', 'description': "Placeholder"},
+    {'name': 'Thanksgiving Turkey Trot', 'date': '2024-11-23', 'time': '8:00 AM', 'price': '\$35', 'description': "Placeholder"}
   ],
     'Seattle, WA': [
-    {'name': 'Seattle International Comedy Competition', 'date': '2024-11-04 to 2024-11-25', 'time': 'Various', 'price': '\$25+'},
-    {'name': 'WildLights at Woodland Park Zoo', 'date': '2024-11-24 to 2024-12-31', 'time': '5:30 PM', 'price': '\$17'},
-    {'name': 'Macy’s Holiday Parade', 'date': '2024-11-24', 'time': '9:00 AM', 'price': 'Free'}
+    {'name': 'Seattle International Comedy Competition', 'date': '2024-11-04 to 2024-11-25', 'time': 'Various', 'price': '\$25+', 'description': "Placeholder"},
+    {'name': 'WildLights at Woodland Park Zoo', 'date': '2024-11-24 to 2024-12-31', 'time': '5:30 PM', 'price': '\$17', 'description': "Placeholder"},
+    {'name': 'Macy’s Holiday Parade', 'date': '2024-11-24', 'time': '9:00 AM', 'price': 'Free', 'description': "Placeholder"}
   ],
     'Denver, CO': [
-    {'name': 'Denver Film Festival', 'date': '2024-11-02 to 2024-11-12', 'time': 'Various', 'price': 'Varies'},
-    {'name': 'Parade of Lights', 'date': '2024-11-25', 'time': '6:00 PM', 'price': 'Free'},
-    {'name': 'Blossoms of Light', 'date': '2024-11-24 to 2024-01-01', 'time': '5:00 PM', 'price': '\$16'}
+    {'name': 'Denver Film Festival', 'date': '2024-11-02 to 2024-11-12', 'time': 'Various', 'price': 'Varies', 'description': "Placeholder"},
+    {'name': 'Parade of Lights', 'date': '2024-11-25', 'time': '6:00 PM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Blossoms of Light', 'date': '2024-11-24 to 2024-01-01', 'time': '5:00 PM', 'price': '\$16', 'description': "Placeholder"}
   ],
     'Boston, MA': [
-    {'name': 'Boston Comedy Festival', 'date': '2024-11-04 to 2024-11-10', 'time': 'Various', 'price': '\$30+'},
-    {'name': 'Boston International Kids Film Festival', 'date': '2024-11-03 to 2024-11-05', 'time': '10:00 AM', 'price': '\$15'},
-    {'name': 'Harvard Square Holiday Fair', 'date': '2024-11-24 to 2024-12-31', 'time': '11:00 AM', 'price': 'Free'}
+    {'name': 'Boston Comedy Festival', 'date': '2024-11-04 to 2024-11-10', 'time': 'Various', 'price': '\$30+', 'description': "Placeholder"},
+    {'name': 'Boston International Kids Film Festival', 'date': '2024-11-03 to 2024-11-05', 'time': '10:00 AM', 'price': '\$15', 'description': "Placeholder"},
+    {'name': 'Harvard Square Holiday Fair', 'date': '2024-11-24 to 2024-12-31', 'time': '11:00 AM', 'price': 'Free', 'description': "Placeholder"}
   ],
     'Nashville, TN': [
-    {'name': 'Christmas Village', 'date': '2024-11-09 to 2024-11-11', 'time': '10:00 AM', 'price': '\$10'},
-    {'name': 'Holiday LIGHTS at Cheekwood', 'date': '2024-11-23 to 2024-12-31', 'time': '5:00 PM', 'price': '\$26'},
-    {'name': 'Nashville Turkey Trot', 'date': '2024-11-28', 'time': '8:00 AM', 'price': '\$40'}
+    {'name': 'Christmas Village', 'date': '2024-11-09 to 2024-11-11', 'time': '10:00 AM', 'price': '\$10', 'description': "Placeholder"},
+    {'name': 'Holiday LIGHTS at Cheekwood', 'date': '2024-11-23 to 2024-12-31', 'time': '5:00 PM', 'price': '\$26', 'description': "Placeholder"},
+    {'name': 'Nashville Turkey Trot', 'date': '2024-11-28', 'time': '8:00 AM', 'price': '\$40', 'description': "Placeholder"}
   ],
     'Detroit, MI': [
-    {'name': 'Detroit Tree Lighting Ceremony', 'date': '2024-11-17', 'time': '5:30 PM', 'price': 'Free'},
-    {'name': 'America’s Thanksgiving Parade', 'date': '2024-11-28', 'time': '9:00 AM', 'price': 'Free'},
-    {'name': 'Detroit Christmas WonderFest', 'date': '2024-11-30 to 2024-12-23', 'time': '5:00 PM', 'price': '\$20'}
+    {'name': 'Detroit Tree Lighting Ceremony', 'date': '2024-11-17', 'time': '5:30 PM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'America’s Thanksgiving Parade', 'date': '2024-11-28', 'time': '9:00 AM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Detroit Christmas WonderFest', 'date': '2024-11-30 to 2024-12-23', 'time': '5:00 PM', 'price': '\$20', 'description': "Placeholder"}
   ],
     'Oklahoma City, OK': [
-    {'name': 'Holiday River Parade', 'date': '2024-11-09', 'time': '6:00 PM', 'price': 'Free'},
-    {'name': 'Winter Shoppes at Myriad Gardens', 'date': '2024-11-24 to 2024-12-31', 'time': '10:00 AM', 'price': 'Free'},
-    {'name': 'Turkey Trot', 'date': '2024-11-28', 'time': '8:00 AM', 'price': '\$35'}
+    {'name': 'Holiday River Parade', 'date': '2024-11-09', 'time': '6:00 PM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Winter Shoppes at Myriad Gardens', 'date': '2024-11-24 to 2024-12-31', 'time': '10:00 AM', 'price': 'Free', 'description': "Placeholder"},
+    {'name': 'Turkey Trot', 'date': '2024-11-28', 'time': '8:00 AM', 'price': '\$35', 'description': "Placeholder"}
   ],
     'Portland, OR': [
-    {'name': 'Portland Book Festival', 'date': '2024-11-11', 'time': '9:00 AM', 'price': '\$15'},
-    {'name': 'ZooLights at Oregon Zoo', 'date': '2024-11-22 to 2024-01-05', 'time': '5:00 PM', 'price': '\$20'},
-    {'name': 'Portland Thanksgiving Dinner Cruise', 'date': '2024-11-28', 'time': '6:00 PM', 'price': '\$85'}
+    {'name': 'Portland Book Festival', 'date': '2024-11-11', 'time': '9:00 AM', 'price': '\$15', 'description': "Placeholder"},
+    {'name': 'ZooLights at Oregon Zoo', 'date': '2024-11-22 to 2024-01-05', 'time': '5:00 PM', 'price': '\$20', 'description': "Placeholder"},
+    {'name': 'Portland Thanksgiving Dinner Cruise', 'date': '2024-11-28', 'time': '6:00 PM', 'price': '\$85', 'description': "Placeholder"}
   ],
     'Las Vegas, NV': [
     {'name': 'Las Vegas National Horse Show', 'date': '2024-11-15 to 2024-11-19', 'time': '9:00 AM', 'price': '\$20'},
@@ -779,7 +779,7 @@ class EventsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final events = eventsData[location] ?? [{'name': 'No events available', 'date': '', 'time': '', 'price': ''}];
+    final events = eventsData[location] ?? [{'name': 'No events available', 'date': '', 'time': '', 'price': '', 'description': ''}];
 
     return Scaffold(
       appBar: AppBar(
@@ -844,6 +844,7 @@ class EventsScreen extends StatelessWidget {
                               eventDate: event['date']!,
                               eventTime: event['time']!,
                               eventPrice: event['price']!,
+                              eventDescription: event['description']!,               
                             ),
                           ),
                         );
