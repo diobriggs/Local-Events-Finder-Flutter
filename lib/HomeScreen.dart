@@ -45,6 +45,12 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   @override
+  void initState() {
+    super.initState();
+    _suggestedLocations.sort();  // Sort locations alphabetically
+  }
+
+  @override
   void dispose() {
     _locationController.dispose();
     super.dispose();
@@ -52,8 +58,29 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _navigateToEventsScreen(BuildContext context) {
     String location = _locationController.text.trim();
-
     if (location.isNotEmpty && location.contains(',')) {
+      // Split input into city and state
+      List<String> parts = location.split(',').map((s) => s.trim()).toList();
+      String city = parts[0];
+      String state = parts.length > 1 ? parts[1] : '';
+
+      // Check if the entered city and state are in the suggested list
+      bool locationExists = _suggestedLocations.contains(location);
+
+      // If location doesn't exist, try to find a default city in the same state
+      if (!locationExists && state.isNotEmpty) {
+        String? defaultLocation = _suggestedLocations.firstWhere(
+          (loc) => loc.endsWith(', $state'),
+          orElse: () => '',
+        );
+
+        // Update the location to a city in the entered state
+        if (defaultLocation.isNotEmpty) {
+          location = defaultLocation;
+        }
+      }
+
+      // Navigate to EventsScreen with the (possibly updated) location
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -61,6 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       );
     } else {
+      // Show error if format is incorrect
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
@@ -132,12 +160,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     SizedBox(height: 16),
                     ElevatedButton(
                       onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => FavoritesScreen()),
-                      );
-                    },
-                    child: Text("View Favorites"),
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => FavoritesScreen()),
+                        );
+                      },
+                      child: Text("View Favorites"),
                     ),
                   ],
                 ),
