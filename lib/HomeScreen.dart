@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'EventsScreen.dart';
+import 'FavoritesScreen.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -127,6 +128,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     ElevatedButton(
                       onPressed: () => _navigateToEventsScreen(context),
                       child: Text('Find Events'),
+                    ),
+                    SizedBox(height: 16),
+                    ElevatedButton(
+                      onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => FavoritesScreen()),
+                      );
+                    },
+                    child: Text("View Favorites"),
                     ),
                   ],
                 ),
