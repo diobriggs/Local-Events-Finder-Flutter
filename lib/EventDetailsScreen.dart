@@ -1,25 +1,49 @@
-import 'package:flutter/material.dart';
 
-class EventDetailsScreen extends StatelessWidget {
+import 'package:flutter/material.dart';
+import 'FavoritesScreen.dart';
+
+class EventDetailsScreen extends StatefulWidget {
   final String eventName;
   final String eventDate;
   final String eventTime;
   final String eventPrice;
-  final String eventDescription; // New parameter for unique description
+  final String eventDescription;
 
   EventDetailsScreen({
     required this.eventName,
     required this.eventDate,
     required this.eventTime,
     required this.eventPrice,
-    required this.eventDescription, // Include in constructor
+    required this.eventDescription,
   });
+
+  @override
+  _EventDetailsScreenState createState() => _EventDetailsScreenState();
+}
+
+class _EventDetailsScreenState extends State<EventDetailsScreen> {
+  bool isFavorited = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(eventName),
+        title: Text(widget.eventName),
+        actions: [
+          IconButton(
+            icon: Icon(isFavorited ? Icons.favorite : Icons.favorite_border),
+            onPressed: () {
+              setState(() {
+                isFavorited = !isFavorited;
+                if (isFavorited) {
+                  favoritedEvents.add(widget.eventName);  // Add to favorites
+                } else {
+                  favoritedEvents.remove(widget.eventName);  // Remove from favorites
+                }
+              });
+            },
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -27,18 +51,24 @@ class EventDetailsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              eventName,
+              widget.eventName,
               style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold, color: Colors.teal[800]),
             ),
             Divider(color: Colors.teal, thickness: 1),
-            SizedBox(height: 12),
-            Text('Date: $eventDate', style: TextStyle(fontSize: 18)),
-            Text('Time: $eventTime', style: TextStyle(fontSize: 18)),
-            Text('Price: $eventPrice', style: TextStyle(fontSize: 18, color: Colors.orange[700])),
-            SizedBox(height: 24),
-            Text(
-              eventDescription, // Display the unique description
-              style: TextStyle(fontSize: 16),
+            Text("Date: ${widget.eventDate}"),
+            Text("Time: ${widget.eventTime}"),
+            Text("Price: ${widget.eventPrice}"),
+            SizedBox(height: 10),
+            Text(widget.eventDescription),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FavoritesScreen()),
+                );
+              },
+              child: Text("View Favorites"),
             ),
           ],
         ),
